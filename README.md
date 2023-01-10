@@ -7,7 +7,11 @@ The main screen of the app displays the current exchange rate between Euros and 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/MartinKusek/KunaToEuro/blob/main/Screenshots/Screen1.png)
+
+![App Screenshot](https://github.com/MartinKusek/KunaToEuro/blob/main/Screenshots/Screen2.png)
+
+![App Screenshot](https://github.com/MartinKusek/KunaToEuro/blob/main/Screenshots/Screen3.png)
 
 
 ## Features
@@ -23,7 +27,7 @@ The main screen of the app displays the current exchange rate between Euros and 
 1. Clone the repository to your local machine
 
 ```bash
-  git clone https://github.com/[username]/CurrencyExchange.git
+  git clone https://github.com/MartinKusek/KunaToEuro.git
 ```
 
 2. Open the project in Xcode
