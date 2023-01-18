@@ -60,7 +60,9 @@ struct ContentView: View {
                 .keyboardType(.decimalPad)
                 .onChange(of: value) { newValue in
                     print(newValue)
-                    value = newValue.filter { "0123456789.".contains($0) }
+                    value = newValue.filter { "0123456789.,".contains($0) }
+                    
+                    value = value.replacingOccurrences(of: ",", with: ".")
                     
                     //If the first diget is 0 next is .
                     if value.first == "0" {
@@ -94,5 +96,18 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+public extension UITextField
+{
+    override var textInputMode: UITextInputMode?
+    {
+        let locale = Locale(identifier: "en-US")
+        
+        return
+            UITextInputMode.activeInputModes.first(where: { $0.primaryLanguage == locale.identifier })
+            ??
+            super.textInputMode
     }
 }
